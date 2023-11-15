@@ -39,18 +39,21 @@ const Navbar = () => {
     };
 
     // Attach the event listener to the window scroll event
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <Disclosure as="nav" className={`navbar text-white p-4 fixed w-full top-0 transition-all ${
-      isScrolled ? 'shadow-md' : 'shadow-none' 
-    }`}>
+    <Disclosure
+      as="nav"
+      className={`navbar text-white p-4 fixed w-full top-0 transition-all ${
+        isScrolled ? "shadow-md" : "shadow-none"
+      }`}
+    >
       <>
         <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6">
           <div className="relative flex h-12 sm:h-18 items-center">
@@ -120,20 +123,20 @@ const Navbar = () => {
             {/* DRAWER LINKS DATA */}
 
             <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-                <div className="px-5 font-semibold">
-                    <Drawerdata />
-                </div>
+              <div className="px-5 font-semibold">
+                <Drawerdata />
+              </div>
               <div className="space-y-1 px-5 pt-2 pb-3">
-              <Link href="/signup">
+                <Link href="/signup">
                   <button className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple">
                     Sign Up
                   </button>
                 </Link>
                 <div className="mt-2 p-2"></div>
                 <div className="flex align-center">
-                    <Socials />
+                  <Socials />
                 </div>
-            </div>
+              </div>
             </Drawer>
           </div>
         </div>

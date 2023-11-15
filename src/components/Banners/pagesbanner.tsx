@@ -8,11 +8,11 @@ export default function PagesBanner({
 }: {
   link: string;
   page: string;
-  description: string
+  description: string;
 }) {
   return (
     <div className="bg-lightblue">
-    <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center">
+      <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center">
         <span className="text-purple font-bold">{description}</span>
         <h1 className="text-2xl sm:text-4xl font-semibold text-black">
           {page}
