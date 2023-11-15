@@ -1,20 +1,8 @@
-// export default function ScrollUp() {
-//   return (
-//     <div id="scroll" className="scroll-up position-relative z-index11">
-//       <div className="top text-center">
-//         <span className="white-color theme-bg">
-//           <i className="fa fa-arrow-alt-up"></i>
-//         </span>
-//       </div>
-//     </div>
-//   );
-// }
+"use client";
 
-// components/ScrollToTopButton.js
-
-'use client';
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,11 +14,11 @@ export default function ScrollToTopButton() {
       setIsVisible(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -38,18 +26,25 @@ export default function ScrollToTopButton() {
     // Smooth scroll to the top of the page
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   return (
     <button
-      className={`fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full ${
-        isVisible ? 'visible' : 'invisible'
+      className={`fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full p-6 opacity-95 ${
+        isVisible ? "visible" : "invisible"
       }`}
       onClick={scrollToTop}
     >
-      Scroll to Top
+      <Fade direction={"up"} cascade damping={1e-1} triggerOnce={true}>
+        <Image
+          src="/icons/uparrow.svg"
+          alt="Scroll up button"
+          height={45}
+          width={45}
+        ></Image>
+      </Fade>
     </button>
   );
-};
+}

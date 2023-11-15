@@ -37,7 +37,7 @@ const Data = () => {
                 className={classNames(
                   item.current
                     ? "bg-gray-900 text-purple"
-                    : "text-black hover:bg-gray-700 hover:text-purple",
+                    : "text-black hover:text-purple",
                   "block py-2 rounded-md text-base"
                 )}
                 aria-current={item.current ? "page" : undefined}

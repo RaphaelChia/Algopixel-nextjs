@@ -18,11 +18,11 @@ export default function PagesBanner({
           {page}
         </h1>
         <nav>
-          <Link href="/" className="text-lightgrey">
+          <Link href="/" className="text-darkblue opacity-70 hover:text-purple">
             {"Home "}
           </Link>
-          <Link href={link} className="text-lightgrey">
-            <span className="text-black">/</span> {page}
+          <span className="text-darkblue opacity-85">/ </span> 
+          <Link href={link} className="text-darkblue opacity-70">{page}
           </Link>
         </nav>
       </div>

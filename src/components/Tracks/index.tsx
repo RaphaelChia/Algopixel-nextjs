@@ -1,61 +1,100 @@
-import Image from "next/image";
+"use client"
+import Image from 'next/image';
 import Link from 'next/link';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import { Fade } from "react-awesome-reveal";
 
-interface datatype {
+
+interface cardDataType {
     imgSrc: string;
     heading: string;
-    paragraph: string;
+    subheading: string;
+    link: string;
 }
 
-const Aboutdata: datatype[] = [
+const cardData: cardDataType[] = [
     {
-        imgSrc: "/icons-track/gamedev.png",
+        imgSrc: '/icons-track/gamedev.png',
         heading: "Game Development",
-        paragraph: "Game development immerses children in the world of interactive entertainment. They'll design characters, levels, and gameplay, and even code their games using platforms like Scratch and Python.",
+        subheading: "Immerse in the world of interactive entertainment. Code games using platforms like Scratch and Python.",
+        link: 'Learn more'
     },
     {
-        imgSrc: "/assets/features/signal.svg",
-        heading: "Insights",
-        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
-
+        imgSrc: '/images/Features/featureTwo.svg',
+        heading: "Cooking warw",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
     },
     {
-        imgSrc: "/assets/features/dollar.svg",
-        heading: "Payment",
-        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
-
+        imgSrc: '/images/Features/featureThree.svg',
+        heading: "Best chef",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
     },
     {
-        imgSrc: "/assets/features/dollar.svg",
-        heading: "Payment",
-        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
-
+        imgSrc: '/images/Features/featureFour.svg',
+        heading: "Fast food",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
+    },
+    {
+        imgSrc: '/images/Features/featureFour.svg',
+        heading: "Fast food",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
+    },
+    {
+        imgSrc: '/images/Features/featureFour.svg',
+        heading: "Fast food",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
+    },
+    {
+        imgSrc: '/images/Features/featureFour.svg',
+        heading: "Fast food",
+        subheading: "Sed ut perspiciatis unde omnis iste natus error",
+        link: 'Learn more'
     }
-    
+
 ]
 
-export default function Tracks () {
+const Work = () => {
     return (
-        <div className="bg-babyblue" id="features">
-            <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">Our Tracks</h3>
-                <h5 className="text-black opacity-60 text-lg font-normal text-center">From crafting websites to dreaming up interactive games, we have the perfect track to a passion for coding.</h5>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10'>
-                    {Aboutdata.map((item, i) => (
-                        <div key={i} className='bg-white rounded-2xl p-5 featureShadow'>
 
-                            <Image src={item.imgSrc} alt={item.imgSrc} width={55} height={55} className="mb-2" />
-                            <h3 className="text-2xl font-semibold text-black mt-5">{item.heading}</h3>
-                            <h4 className='text-lg font-normal text-black opacity-50 my-2'>{item.paragraph}</h4>
-                            <Link href={'/'} className="text-electricblue text-xl font-medium flex gap-2 pt-10 pb-2">
-                                Learn more <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
-                            </Link>
+        <div>
+            <div className='mx-auto max-w-7xl py-40 px-6' id="about-section">
+                <div className='text-center mb-14' >
+                    <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+                        <h3 className='text-2xl lg:text-4xl font-bold text-darkblue'>Our Tracks </h3>
+                        <h3 className='text-lg font-normal mb-3 '>Tracks</h3>
+                    </Fade>
+                    <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
+                        <p className='text-2xl lg:text-4xl font-semibold text-purple'>From crafting websites to interactive games<br /> </p>
+                    </Fade>
+                </div>
 
-                        </div>
-                    ))}
+
+                <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-5 mt-32'>
+                    <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
+                        {cardData.map((items, i) => (
+                            <div className='card-b p-8 relative rounded-3xl' key={i}>
+                                <div className='work-img-bg rounded-full flex justify-center absolute top-[-50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]'>
+                                    <Image src={items.imgSrc} alt={items.imgSrc} width={510} height={10} />
+                                </div>
+                                <h3 className='text-2xl text-black font-semibold text-center mt-16'>{items.heading}</h3>
+                                <p className='text-lg font-normal text-black text-center text-opacity-50 mt-2'>{items.subheading}</p>
+                                {/* <div className='flex items-center justify-center'>
+                                    <Link href='/'><p className='text-center text-lg font-medium text-pink mt-2 hover-underline'>{items.link}<ChevronRightIcon width={20} height={20} /></p></Link>
+                                </div> */}
+                            </div>
+                        ))}
+                    </Fade>
                 </div>
             </div>
         </div>
+
     )
 }
+
+export default Work;
