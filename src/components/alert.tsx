@@ -52,7 +52,7 @@ export default function Alert() {
             </p>
             <a
               href="/holidayprogrammes"
-              className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 "
+              className="flex-none rounded-full bg-white px-3.5 py-1 text-sm font-semibold shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 "
             >
               Find Out More <span aria-hidden="true">&rarr;</span>
             </a>
