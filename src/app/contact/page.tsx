@@ -90,7 +90,7 @@ export default function Page() {
                     ...genRHFRegisterOptionsRequired(),
                     ...genRHFRegisterOptionsLength(3, 12),
                     pattern: {
-                      value: /^[*]+[0-9]{,11}$/,
+                      value: /\+65(6|8|9)\d{7}/g,
                       message: "Invalid phone number. e.g. +6599112233"
                     }
                   }
