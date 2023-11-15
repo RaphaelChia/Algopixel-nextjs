@@ -50,9 +50,8 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className={`navbar text-white p-4 fixed w-full top-0 transition-all ${
-        isScrolled ? "shadow-md" : "shadow-none"
-      }`}
+      className={`navbar text-white p-4 fixed w-full top-0 transition-all ${isScrolled ? "shadow-md" : "shadow-none"
+        }`}
     >
       <>
         <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6">
@@ -111,6 +110,7 @@ const Navbar = () => {
 
             {/* DRAWER ICON */}
 
+            {/* Hamburger icon */}
             <div className="block lg:hidden">
               <Bars3Icon
                 className="block h-6 w-6 stroke-purple"
