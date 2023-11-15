@@ -9,23 +9,26 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'white': '#ffffff',
-      'black': '#000000',
-      'dodgerblue': "#0057FF",
-      'midnightblue': '#001B50',
-      'electricblue' : '#1444EF',
-      'grey500': '#ECECEC',
-      'blue' : "#1443ED",
-      'lightgrey' : "#A8AEB9",
-      'cornflowerblue' : "#6493EA",
-      'translucentwhite' : "rgba(255, 255, 255, 0.65)",
-      'purple' : "#758BFD",
-      'lightblue' : "#F0F6FB",
-      'darkblue' : "#293132",
+    extend:{
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        'white': '#ffffff',
+        'black': '#000000',
+        'dodgerblue': "#0057FF",
+        'midnightblue': '#001B50',
+        'electricblue' : '#1444EF',
+        'grey500': '#ECECEC',
+        'blue' : "#1443ED",
+        'lightgrey' : "#A8AEB9",
+        'cornflowerblue' : "#6493EA",
+        'translucentwhite' : "rgba(255, 255, 255, 0.65)",
+        'purple' : "#758BFD",
+        'lightblue' : "#F0F6FB",
+        'darkblue' : "#293132",
+      },
     },
+    
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
@@ -41,8 +44,7 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
       '85xl': ['85px', { lineHeight: '1' }],
-    },
-    extend: {},
+    }
   },
   plugins: [],
 }
