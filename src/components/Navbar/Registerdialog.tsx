@@ -4,7 +4,7 @@ import { LockClosedIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import Image from "next/image";
 
-const Signup = () => {
+const Register = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
@@ -17,17 +17,17 @@ const Signup = () => {
 
   return (
     <>
-      <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <div className="hidden md:block">
+      {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div className="hidden md:block"> */}
           <button
             type="button"
             className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple"
             onClick={openModal}
           >
-            Sign Up
+            Register
           </button>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -106,4 +106,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Register;

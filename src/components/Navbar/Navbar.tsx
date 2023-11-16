@@ -10,7 +10,8 @@ import Image from "next/image";
 import algopixelLogo from "../../../public/algopixel/algopixel_logo.png";
 import Socials from "../Social/social";
 import NavBarDropdown from "./navbaritem";
-import Signup from "./Signupdialog";
+
+import Register from "./Registerdialog";
 
 interface NavigationItem {
   name: string;
@@ -127,7 +128,7 @@ const Navbar = () => {
                     Sign Up
                   </button>
                 </Link> */}
-                <Signup/>
+                <Register/>
               </div>
             </div>
 
@@ -152,11 +153,12 @@ const Navbar = () => {
                 <Drawerdata />
               </div>
               <div className="space-y-1 px-5 pt-2 pb-3">
-                <Link href="/signup">
+              <Register/>
+                {/* <Link href="/signup">
                   <button className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple">
-                    Sign Up
+                    Register
                   </button>
-                </Link>
+                </Link> */}
                 <div className="mt-2 p-2"></div>
                 <div className="flex align-center">
                   <Socials />

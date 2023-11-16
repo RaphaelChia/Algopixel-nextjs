@@ -17,22 +17,21 @@ export default function IndexBanner(){
                     <Image data-depth="0.20" className="hm3-shape hm3-shape-11 d-none d-lg-block heartbeat" src="/shape/home3.round-shape3.png" alt="#" width={15} height={15}/>
                     <Image data-depth="0.20" className="hm3-shape hm3-shape-12 d-none d-lg-block heartbeat" src="/shape/home3.round-shape3.png" alt="#" width={15} height={15}/>
                 </div> */}
-            <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-                <div className='grid grid-cols-1 lg:grid-cols-12'>
-                    <div className='col-span-7 flex flex-col justify-evenly relative'>
-                        {/* <Image src="/assets/banner/star.svg" alt="star-image" width={95} height={97} className='absolute top-[-74px] right-[51px]' />
-                        <Image src="/assets/banner/lineone.svg" alt="line-image" width={190} height={148} className='absolute top-[-74px] right-[51px]' /> */}
-                        <h1 className='text-midnightblue text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5'>Elevate Innovation Through Coding and Pixels</h1>
-                        <h3 className='text-black opacity-75 text-lg font-normal text-center lg:text-start pt-8'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>
-                        <div className='pt-8 mx-auto lg:mx-0'>
-                            <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-electricblue hover:text-white hover:bg-blue">
-                                Get started
+            <div className="mx-auto max-w-7xl pt-10 sm:pb-24 px-6">
+                <div className='grid grid-cols-1 md:grid-cols-12'>
+                    <div className='col-span-7 flex flex-col justify-evenly relative m-10'>
+                        <h2 className='text-purple text-2xl sm:text-30xl text-center md:text-start font-bold lh-133 pt-5'>Algopixel Coding</h2>
+                        <h1 className='text-darkblue text-4xl sm:text-35xl text-center md:text-start font-extrabold lh-133 pt-2 leading-10  '>Elevate Innovation Through Coding and Pixels</h1>
+                        <h3 className='text-black opacity-75 text-lg font-normal text-center md:text-start pt-8'>Our tailored programs empower young minds to innovate by combining the precision of coding with the creativity of pixels.</h3>
+                        <div className='pt-8 mx-auto md:mx-0'>
+                            <button className="text-white text-xl font-semibold py-4 px-12 rounded-full transition duration-150 ease-in-out bg-purple hover:text-purple hover:bg-white outline-purple-500">
+                                Our Story
                             </button>
                         </div>
                     </div>
 
-                    <div className='col-span-5 flex justify-center xl:-mb-32 xl:-mr-32 pt-10 lg:pt-0'>
-                        <Image src="/images/buildskills.png" alt="Build Skills" width={700} height={405} />
+                    <div className='col-span-5 flex justify-center xl:-mb-28 xl:-mr-30 md:pt-20 sm:pt-0 lg:pt-0'>
+                        <Image src="/images/buildskills.png" alt="Build Skills" width={400} height={400} />
                     </div>
                 </div>
             </div>
