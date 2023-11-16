@@ -6,7 +6,7 @@ import NavBarItem from "@/components/Navbar/navbaritem";
 // import NavbarWithMegaMenu from "@/components/navbar";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer";
-import ScrollToTopButton from "@/components/Others/scrollup";
+import ScrollToTopButton from "@/components/scrollup";
 import Alert from "@/components/alert";
 
 // const inter = Inter({ subsets: ["latin"] });
