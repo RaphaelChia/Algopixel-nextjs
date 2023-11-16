@@ -27,12 +27,12 @@ const whydata: whydata[] = [
 
 const Why = () => {
     return (
-        <div id="about" className="bg-lightblue">
+        <div className="bg-gradient-to-b from-[#F0F6FB] to-white-300">
             <div className='mx-auto max-w-7xl px-4 my-20 sm:py-20 lg:px-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2'>
 
                     {/* COLUMN-1 */}
-                    <div className="lg:-ml-64">
+                    <div className="">
                     <h3 className="text-4xl lg:text-5xl pt-4 font-semibold sm:leading-tight mt-5 text-center lg:text-start">Why Choose Algopixel?</h3>
                         <h4 className="text-lg pt-4 font-normal sm:leading-tight text-center text-beach lg:text-start">Algopixel is the place where your coding journey begins. We invite you to explore our courses, meet our passionate team, and discover the endless possibilities that coding can offer.</h4>
 

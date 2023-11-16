@@ -21,10 +21,10 @@ export default function IndexBanner(){
                 <div className='grid grid-cols-1 md:grid-cols-12'>
                     <div className='col-span-7 flex flex-col justify-evenly relative m-10'>
                         <h2 className='text-purple text-2xl sm:text-30xl text-center md:text-start font-bold lh-133 pt-5'>Algopixel Coding</h2>
-                        <h1 className='text-darkblue text-4xl sm:text-35xl text-center md:text-start font-extrabold lh-133 pt-2 leading-10  '>Elevate Innovation Through Coding and Pixels</h1>
-                        <h3 className='text-black opacity-75 text-lg font-normal text-center md:text-start pt-8'>Our tailored programs empower young minds to innovate by combining the precision of coding with the creativity of pixels.</h3>
+                        <h1 className='text-darkblue text-5xl sm:text-35xl text-center md:text-start font-bold lh-133 pt-2 leading-snug'>Elevate Innovation Through Coding and Pixels</h1>
+                        <h3 className='text-black opacity-75 text-xl font-normal text-center md:text-start pt-8 leading-relaxed'>Our tailored programs empower young minds to innovate by combining the precision of coding with the creativity of pixels.</h3>
                         <div className='pt-8 mx-auto md:mx-0'>
-                            <button className="text-white text-xl font-semibold py-4 px-12 rounded-full transition duration-150 ease-in-out bg-purple hover:text-purple hover:bg-white outline-purple-500">
+                            <button className="text-white text-xl font-semibold py-4 px-12 rounded-full transition duration-150 ease-in-out bg-purple hover:text-purple hover:bg-white border-purple border-[2px]">
                                 Our Story
                             </button>
                         </div>

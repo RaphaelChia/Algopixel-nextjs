@@ -19,14 +19,14 @@ const Register = () => {
     <>
       {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <div className="hidden md:block"> */}
-          <button
-            type="button"
-            className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple"
-            onClick={openModal}
-          >
-            Register
-          </button>
-        {/* </div>
+      <button
+        type="button"
+        className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple"
+        onClick={openModal}
+      >
+        Register
+      </button>
+      {/* </div>
       </div> */}
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -73,17 +73,33 @@ const Register = () => {
                         </div>
                       </div>
                       <div className="space-y-4">
-                      <button className="group relative flex w-full justify-center rounded-md border border-transparent bg-purple py-3 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                      <Link href="https://forms.gle/UDiEWqC5gGkddNUm8" target="_blank">
+                        <button className="group relative flex w-full justify-center rounded-md border border-transparent bg-purple py-3 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                          <Link
+                            href="https://forms.gle/UDiEWqC5gGkddNUm8"
+                            target="_blank"
+                          >
                             Holiday Classes - December 2023
-                      </Link>
+                          </Link>
                         </button>
                         <button className="group relative flex w-full justify-center rounded-md border border-transparent bg-purple py-3 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                      <Link href="https://forms.gle/zH4Ebrrkc3ugx9E37" target="_blank">
+                          <Link
+                            href="https://forms.gle/zH4Ebrrkc3ugx9E37"
+                            target="_blank"
+                          >
                             Weekly Classes - January 2024 onwards
-                    </Link>
+                          </Link>
                         </button>
-                    </div>
+                        <button className="group relative flex w-full justify-center rounded-md border border-transparent bg-[#25D366] py-3 px-4 text-sm font-medium text-white hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                          {/* <Image src="/icons/whatsapp.svg" alt="Whatsapp Icon" height={20} width={20}></Image> */}
+                          <Link
+                          className="pl-2"
+                            href="https://wa.me/+6588001637"
+                            target="_blank"
+                          >
+                            Any Queries - Whatsapp Us
+                          </Link>
+                        </button>
+                      </div>
                     </div>
                   </div>
 

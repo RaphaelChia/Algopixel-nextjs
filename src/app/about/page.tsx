@@ -14,8 +14,8 @@ export default function Page() {
         imgsrc="/images/kidcoding.png"
         imgalt="Kid Coding Image"
       />
+      {/* <Numbers /> */}
       <Why />
-      <Numbers />
     </div>
   );
 }

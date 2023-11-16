@@ -23,8 +23,8 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
-  { name: "Courses", href: "/courses", current: false, children: ["Holiday programme 1", "Holiday programme 2"] },
-  { name: "Structure", href: "/structure", current: false },
+  { name: "Courses", href: "/courses", current: false, children: ["All Courses","Weekly Classes", "Holiday Classes (Dec 2023)"] },
+  { name: "FAQ", href: "/faq", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 
