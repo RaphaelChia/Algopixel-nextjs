@@ -14,6 +14,7 @@ interface NavigationItem {
   name: string;
   href: string;
   current: boolean;
+  children?: string[];
 }
 
 const navigation: NavigationItem[] = [
@@ -81,19 +82,19 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center border-right ">
                 <div className="flex justify-end space-x-4">
                   {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-black"
-                          : "navlinks hover:opacity-100",
-                        "px-3 py-4 rounded-md text-lg font-bold hover:text-purple space-links text-darkblue"
-                      )}
-                      aria-current={item.href ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Link>
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-black"
+                            : "navlinks hover:opacity-100",
+                          "px-3 py-4 rounded-md text-lg font-bold hover:text-purple space-links text-darkblue"
+                        )}
+                        aria-current={item.href ? "page" : undefined}
+                      >
+                        {item.name}
+                      </Link>
                   ))}
                 </div>
               </div>
