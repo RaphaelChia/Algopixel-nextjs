@@ -15,12 +15,12 @@ export default function Page() {
         <div className="flex flex-col gap-[15px] w-full lg:w-fit p-[60px] items-start text-center lg:text-start">
           <span className="text-xl font-bold text-purple w-full">Any Queries?</span>
           <span className="text-5xl font-bold text-gray-800 mb-[30px] w-full">Contact Us</span>
-          <div className="w-full flex lg:flex-col gap-[15px] justify-between lg:justify-normal">
+          <div className="w-full flex flex-col md:flex-row lg:flex-col gap-[15px] justify-between lg:justify-normal">
 
 
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full">
               <div className="w-[50px] flex items-start h-[50px]">icon</div>
-              <div className="flex flex-col grow">
+              <div className="flex flex-col grow text-start">
                 <span className=" text-black text-xl font-bold">Location</span>
                 <div className="text-slate-700 flex flex-col">
                   <span>Junction 10 #01-09</span>
@@ -29,18 +29,18 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full">
               <div className="w-[50px] flex items-start h-[40px]">icon</div>
-              <div className="flex flex-col grow">
+              <div className="flex flex-col grow text-start">
                 <span className=" text-black text-xl font-bold">Email</span>
                 <div className="text-slate-700 flex flex-col">
                   <span>hello@algopixel.sg</span>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full">
               <div className="w-[50px] flex items-start h-[40px]">icon</div>
-              <div className="flex flex-col grow">
+              <div className="flex flex-col grow text-start">
                 <span className=" text-black text-xl font-bold">Phone</span>
                 <div className="text-slate-700 flex flex-col">
                   <span>+65 8800 1637</span>
