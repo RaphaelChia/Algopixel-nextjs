@@ -9,6 +9,7 @@ import Drawerdata from "./Drawerdata";
 import Image from "next/image";
 import algopixelLogo from "../../../public/algopixel/algopixel_logo.png";
 import Socials from "../Social/social";
+import Signup from "./Signupdialog";
 
 interface NavigationItem {
   name: string;
@@ -99,11 +100,12 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="gap-6 hidden lg:flex">
-                <Link href="/signup">
+                {/* <Link href="/signup">
                   <button className="bg-purple flex justify-center text-white w-full font-semibold rounded-full border border-purple py-3 px-4 lg:px-8 navbutton hover:bg-white hover:text-purple">
                     Sign Up
                   </button>
-                </Link>
+                </Link> */}
+                <Signup/>
               </div>
             </div>
 
