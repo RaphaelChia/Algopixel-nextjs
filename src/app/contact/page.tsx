@@ -19,7 +19,7 @@ export default function Page() {
 
 
             <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className="w-[50px] flex items-start h-full">icon</div>
+              <div className="w-[50px] flex items-start h-[50px]">icon</div>
               <div className="flex flex-col grow">
                 <span className=" text-black text-xl font-bold">Location</span>
                 <div className="text-slate-700 flex flex-col">
@@ -30,7 +30,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className="w-[50px] flex items-start h-full">icon</div>
+              <div className="w-[50px] flex items-start h-[40px]">icon</div>
               <div className="flex flex-col grow">
                 <span className=" text-black text-xl font-bold">Email</span>
                 <div className="text-slate-700 flex flex-col">
@@ -39,7 +39,7 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className="w-[50px] flex items-start h-full">icon</div>
+              <div className="w-[50px] flex items-start h-[40px]">icon</div>
               <div className="flex flex-col grow">
                 <span className=" text-black text-xl font-bold">Phone</span>
                 <div className="text-slate-700 flex flex-col">
