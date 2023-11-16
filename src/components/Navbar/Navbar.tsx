@@ -9,6 +9,7 @@ import Drawerdata from "./Drawerdata";
 import Image from "next/image";
 import algopixelLogo from "../../../public/algopixel/algopixel_logo.png";
 import Socials from "../Social/social";
+import NavBarDropdown from "./navbaritem";
 
 interface NavigationItem {
   name: string;
@@ -20,7 +21,7 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
-  { name: "Courses", href: "/courses", current: false },
+  { name: "Courses", href: "/courses", current: false, children: ["Holiday programme 1", "Holiday programme 2"] },
   { name: "Structure", href: "/structure", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
@@ -82,19 +83,40 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center border-right ">
                 <div className="flex justify-end space-x-4">
                   {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-black"
-                            : "navlinks hover:opacity-100",
-                          "px-3 py-4 rounded-md text-lg font-bold hover:text-purple space-links text-darkblue"
-                        )}
-                        aria-current={item.href ? "page" : undefined}
-                      >
-                        {item.name}
-                      </Link>
+                    <div>
+
+                      {item.children && item.children.length > 0 ? (
+                        <NavBarDropdown trigger={
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className={classNames(
+                              item.current
+                                ? "bg-black"
+                                : "navlinks hover:opacity-100",
+                              "px-3 py-4 rounded-md text-lg font-bold hover:text-purple space-links text-darkblue"
+                            )}
+                            aria-current={item.href ? "page" : undefined}
+                          >
+                            {item.name}
+                          </Link>
+                        } />
+                      ) : (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current
+                              ? "bg-black"
+                              : "navlinks hover:opacity-100",
+                            "px-3 py-4 rounded-md text-lg font-bold hover:text-purple space-links text-darkblue flex items-center justify-center"
+                          )}
+                          aria-current={item.href ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>

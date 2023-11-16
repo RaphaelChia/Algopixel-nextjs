@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from 'react'
+import { Fragment, HTMLAttributes, ReactNode } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import {
@@ -21,11 +21,15 @@ const callsToAction = [
   { name: 'Register here', href: '#', icon: PlayCircleIcon },
 ]
 
-export default function NavBarDropdown() {
+interface Props extends HTMLAttributes<HTMLDivElement>{
+  trigger:ReactNode
+}
+
+export default function NavBarDropdown(props:Props) {
   return (
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-        <span>Solutions</span>
+        {props.trigger}
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
       </Popover.Button>
 
