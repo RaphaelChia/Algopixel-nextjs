@@ -51,12 +51,12 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className={`navbar text-white p-4 fixed w-full top-0 transition-all ${isScrolled ? "shadow-md" : "shadow-none"
+      className={`text-white p-4 w-full sticky top-0 transition-all bg-lightblue z-50 ${isScrolled ? "shadow-md h-[80px]" : "h-[112px] shadow-none"
         }`}
     >
       <>
-        <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6">
-          <div className="relative flex h-12 sm:h-18 items-center">
+        <div className="mx-auto max-w-7xl p-2 md:p-4 lg:px-6 h-full">
+          <div className="relative flex h-full items-center">
             <div className="flex flex-1 items-center sm:justify-between">
               {/* LOGO */}
 
