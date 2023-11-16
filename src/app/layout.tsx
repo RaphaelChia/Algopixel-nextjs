@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>
         <Navbar />
-        <Alert/>
+        <Alert />
         {/* <div className="mt-1"></div> */}
         {children}
         <Footer />
