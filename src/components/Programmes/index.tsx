@@ -29,9 +29,9 @@ export default function Programmes() {
 
                 <h5 className="text-black opacity-60 text-lg font-normal text-center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <br /> laudantium, totam rem aperiam, eaque ipsa quae ab.</h5>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10 flex justify-center'>
+                <div className='gap-x-16 gap-y-4 lg:gap-x-8 mt-10 flex flex-col md:flex-row justify-around items-center'>
                     {Aboutdata.map((item, i) => (
-                        <div key={i} className='bg-white rounded-2xl p-5 featureShadow'>
+                        <div key={i} className='bg-white rounded-2xl p-5 featureShadow grow max-w-[500px] '>
 
                             <Image src={item.imgSrc} alt={item.imgSrc} width={55} height={55} className="mb-2" />
                             <h3 className="text-2xl font-semibold text-black mt-5">{item.heading}</h3>

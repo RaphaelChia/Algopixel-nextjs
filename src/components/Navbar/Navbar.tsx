@@ -23,7 +23,7 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
-  { name: "Courses", href: "/courses", current: false, children: ["All Courses","Weekly Classes", "Holiday Classes (Dec 2023)"] },
+  { name: "Courses", href: "/courses", current: false},
   { name: "FAQ", href: "/faq", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className={`text-white p-4 w-full sticky top-0 transition-all bg-lightblue z-50 ${isScrolled ? "shadow-md h-[80px]" : "h-[112px] shadow-none"
+      className={`text-white p-4 w-full sticky top-0 transition-all bg-lightblue z-50 h-[80px] lg:h-[112px] ${isScrolled ? "shadow-md" : "h-[112px] shadow-none"
         }`}
     >
       <>
