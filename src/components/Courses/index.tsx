@@ -76,12 +76,12 @@ const Aboutdata: datatype[] = [
 
 export default function Courses () {
     return (
-        <div className="bg-babyblue" id="features">
-            <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                {/* <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">Our Tracks</h3>
-                <h5 className="text-black opacity-60 text-lg font-normal text-center">From crafting websites to dreaming up interactive games, we have the perfect track to a passion for coding.</h5> */}
+        <div className="bg-gradient-to-b from-[#F0F6FB] to-white-300">
+            <div className="mx-auto max-w-2xl py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                <h3 className="text-3xl sm:text-4xl font-bold text-darkblue text-center my-6">All Our Courses</h3>
+                <h5 className="text-darkblue opacity-75 text-xl font-normal text-center">From crafting websites to dreaming up interactive games, we have the perfect course to develop a passion for coding.</h5>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-12'>
                     {Aboutdata.map((item, i) => (
                         <div key={i}>
                             <Image src={item.imgSrc} alt={item.imgSrc} width={800} height={400}  className="mb-1 rounded-t-2xl" />
