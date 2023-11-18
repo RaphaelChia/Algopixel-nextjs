@@ -1,7 +1,5 @@
-import Why from "@/components/About/why";
 import WhyUs from "@/components/About/whyus";
 import PagesBanner from "@/components/Banners/pagesbanner";
-import Numbers from "@/components/Numbers";
 import ImgRight from "@/components/Sections/ImgRight";
 
 export default function Page() {
@@ -16,9 +14,7 @@ export default function Page() {
         imgsrc="/icons-about/codingicon.svg"
         imgalt="Kid Coding Image"
       />
-      {/* <Numbers /> */}
       <WhyUs/>
-      {/* <Why /> */}
     </div>
   );
 }

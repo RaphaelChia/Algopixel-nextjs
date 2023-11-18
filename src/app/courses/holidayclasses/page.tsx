@@ -1,8 +1,10 @@
+import PagesBanner from "@/components/Banners/pagesbanner";
+
 export default function Page(){
     return (
         <div>
-            <h1>Page</h1>
-            <p>This is a pa.</p>
-        </div>
+        <PagesBanner link="/courses/holidayclasses" page="Holiday Classes" description=""/>
+
+      </div>
     )
 }

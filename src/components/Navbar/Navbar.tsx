@@ -68,7 +68,7 @@ const Navbar = () => {
                   href="/"
                   className="text-2xl font-semibold text-black ml-4"
                 >
-                  <Image src={algopixelLogo} alt="logo" height={36} />
+                  <Image src={algopixelLogo} alt="logo" height={36} priority/>
                 </Link>
               </div>
               <div className="hidden sm:flex flex-shrink-0 items-center border-right">
@@ -85,7 +85,7 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center border-right ">
                 <div className="flex justify-end space-x-4">
                   {navigation.map((item) => (
-                    <div>
+                    <div key={item.name}>
 
                       {item.children && item.children.length > 0 ? (
                         <NavBarDropdown trigger={

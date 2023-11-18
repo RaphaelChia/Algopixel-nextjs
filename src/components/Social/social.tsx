@@ -5,23 +5,27 @@ interface socialLinks {
     imgSrc: string;
     link: string;
     width: number;
+    height:mumber;
 }
 
 const socialLinks: socialLinks[] = [
     {
         imgSrc: '/icons/facebook.svg',
         link: 'https://www.facebook.com/profile.php?id=61552669371144',
-        width: 15
+        width: 15,
+        height:15
     },
     {
         imgSrc: '/icons/instagram-logo.png',
         link: 'https://www.instagram.com/algopixelcoding/',
-        width: 28
+        width: 28,
+        height:28,
     },
     {
         imgSrc: '/icons/whatsapp.svg',
         link: 'https://wa.me/+6588001637',
-        width: 25
+        width: 25,
+        height:25,
     },
 ]
 
@@ -32,7 +36,7 @@ export default function Socials(){
             {socialLinks.map((items, i) => (
                 <Link href={items.link} key={i} target="_blank">
                     <div className="socialBg h-15 w-15 m-2 flex items-center justify-center">
-                        <Image src={items.imgSrc} alt={items.imgSrc} width={items.width} height={48} className="sepiaa"/>
+                        <Image src={items.imgSrc} alt={items.imgSrc} width={items.width} height={items.height} className="sepiaa"/>
                     </div>
                 </Link>
             ))}

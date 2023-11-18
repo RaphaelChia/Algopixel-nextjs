@@ -16,7 +16,7 @@ export default function Footer() {
                     {/* COLUMN-1 */}
 
                     <div className='col-span-6 md:col-span-12 lg:col-span-6'>
-                        <Image src={algopixelLogo} alt="logo" className='pb-8 pl-4' style={{height:'auto'}}/>
+                        <Image src={algopixelLogo} alt="logo" className='pb-8 pl-4' style={{height:'auto'}} priority/>
                     </div>
 
                     {/* CLOUMN-2 */}
@@ -50,7 +50,7 @@ export default function Footer() {
 
                 <div className='py-8 lg:flex items-center justify-between border-t border-t-bordertop'>
                     <h4 className='text-offwhite text-sm text-center lg:text-start font-normal'>All Rights Reserved. <Link href="https://algopixel.sg/" className="font-bold">Algopixel Coding</Link> ©2023</h4>
-                    <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start pr-20">
+                    <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start pr-0 lg:pr-20 ">
                     <Socials/>
                         {/* <h4 className='text-offwhite text-sm font-normal'><Link href="/" target="_blank">Privacy policy</Link></h4>
                         <div className="h-5 bg-bordertop w-0.5"></div>

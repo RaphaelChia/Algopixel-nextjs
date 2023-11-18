@@ -37,7 +37,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                                 href="/"
                                 className="text-2xl font-semibold text-black ml-0"
                                 >
-                                <Image src={algopixelLogo} alt="logo" height={36} />
+                                <Image src={algopixelLogo} alt="logo" height={36} priority/>
                                 </Link>
                         </div>
 

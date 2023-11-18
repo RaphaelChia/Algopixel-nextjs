@@ -15,7 +15,7 @@ import Alert from "@/components/alert";
 
 export const metadata: Metadata = {
   title: "Algopixel Coding",
-  description: "Learn programming languages, develop problem-solving skills, and create innovative solutions.",
+  description: "Algopixel Coding provides coding education for all ages. Learn programming languages, develop problem-solving skills, and create innovative solutions for you or your kids.",
   keywords: 'coding for kids, programming for children, coding courses, children\'s coding school, tech education, programming, STEM education, Python, Scratch',
 };
 
@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Navbar />
         <Alert />
         {/* <div className="mt-1"></div> */}

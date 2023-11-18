@@ -12,6 +12,7 @@ type Info = {
   botcheck: string;
   name: string;
   email: string;
+  phone: string;
   message: string;
 };
 
@@ -59,7 +60,7 @@ export default function Contact() {
   return (
     <div className="bg-gray-50 dark:bg-neutral-900" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-        <h2 className="text-4xl font-bold">Contact</h2>
+        {/* <h2 className="text-4xl font-bold">Contact</h2> */}
 
         <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
           Want to contact us? Choose an option below and we will be happy to help you out.
@@ -68,7 +69,8 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
         <div>
-          <h2 className="text-lg font-bold">Contact Halley</h2>
+        <span className="text-xl font-bold text-purple w-full">Any Queries?</span>
+          <h2 className="text-5xl font-bold text-gray-800 mb-[30px] w-full">Contact Us</h2>
           <p className="max-w-sm mt-4 mb-4 dark:text-neutral-400">
             Have something to say? We are here to help. Fill up the form or send
             email or call phone.
@@ -91,6 +93,8 @@ export default function Contact() {
         </div>
 
         <div>
+        <h2 className="text-5xl font-bold ">Drop us a line</h2>
+          <h2>We're here to answer your questions</h2>
           {!isSubmitSuccessful && (
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
@@ -126,6 +130,34 @@ export default function Contact() {
                 {errors.name && (
                   <div className="mt-1 text-rose-500">
                     <small>{errors.name.message}</small>
+                  </div>
+                )}
+              </div>
+              <div className="mb-5">
+                <label htmlFor="phone_number">
+                </label>
+                <input
+                  id="phone_number"
+                  type="tel"
+                  placeholder="Phone Number"
+                  // name="email"
+                  autoComplete="false"
+                  className={`w-full px-4 py-3 border-2 placeholder:text-neutral-800 dark:text-white rounded-md outline-none dark:placeholder:text-neutral-200 dark:bg-neutral-900   focus:ring-4  ${
+                    errors.tel
+                      ? "border-rose-500 focus:border-rose-500 ring-rose-100 dark:ring-0"
+                      : "border-neutral-300 focus:border-neutral-600 ring-neutral-100 dark:border-neutral-600 dark:focus:border-white dark:ring-0"
+                  }`}
+                  {...register("email", {
+                    required: "Enter your email",
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "Please enter a valid phn",
+                    },
+                  })}
+                />
+                {errors.email && (
+                  <div className="mt-1 text-rose-500">
+                    <small>{errors.email.message}</small>
                   </div>
                 )}
               </div>

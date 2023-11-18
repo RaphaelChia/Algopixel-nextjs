@@ -68,6 +68,7 @@ const Register = () => {
                               alt="logo"
                               width={300}
                               height={200}
+                              priority
                             />
                           </Link>
                         </div>
