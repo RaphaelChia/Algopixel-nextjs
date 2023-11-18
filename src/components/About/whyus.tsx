@@ -44,6 +44,7 @@ export default function WhyUs() {
   return (
     <div className="bg-gradient-to-b from-[#F0F6FB] to-white-300" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-x-40 pt-16 pb-16">
+
         <h2 className="text-4xl font-bold text-center">Why Choose Algopixel?</h2>
         <p className="pt-6 text-base max-w-2xl text-center m-auto dark:text-neutral-400">
         Algopixel is the place where your coding journey begins. We invite you to explore our courses, meet our passionate team, and discover the endless possibilities that coding can offer.
@@ -67,7 +68,7 @@ export default function WhyUs() {
               <ul className="font-medium space-y-1 flex-1">
                 {content.features.map((feature) => (
                   <li key={feature} className="leading-6 flex">
-                    <CheckIcon className="mt-2 w-3 h-3 text-rose-500 shrink-0" />
+                    <CheckIcon className="mt-1 w-4 h-4 text-purple-500 shrink-0" />
                     <span className="ml-3 dark:text-neutral-400">
                       {feature}
                     </span>
