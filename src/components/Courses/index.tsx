@@ -84,7 +84,7 @@ export default function Courses() {
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-[40px] mt-12 items-stretch'>
                     {Aboutdata.map((item, i) => (
-                        <CourseCard key={i} item={item}/>
+                        <CourseCard elementKey={i} item={item}/>
                     ))}
                 </div>
             </div>

@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { basePath: '/Algopixel-nextjs', assetPrefix: '/Algopixel-nextjs', output: 'export'};
+const nextConfig = { };
 
 module.exports = nextConfig;
