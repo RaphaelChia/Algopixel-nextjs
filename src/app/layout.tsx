@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/scrollup";
 import Alert from "@/components/alert";
+import { ToastContainer, toast } from 'react-toastify';
 
 // const inter = Inter({ subsets: ["latin"] });
 // const poppins = Poppins({ weight: "700" ,subsets: ["latin"]});

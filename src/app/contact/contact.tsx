@@ -7,11 +7,13 @@ import { FieldValues, useForm } from "react-hook-form";
 import { MapIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon } from "@heroicons/react/24/outline";
-
+import {ToastContainer,toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact1() {
+  const formRef = useRef<HTMLFormElement>(null);
   const {
     register,
     handleSubmit,
@@ -23,16 +25,21 @@ export default function Contact1() {
   const submitHandler = (data: FieldValues, e:any) => {
     console.log("field values: ", data);
     e.preventDefault();
-
-    emailjs.sendForm('service_pjho77k', 'template_4tg47x3', useForm(), 't_cr2hag0nIz3hFqm')
+    if (!formRef.current) return
+    console.log(formRef.current)
+    emailjs.sendForm('service_pjho77k', 'template_4tg47x3', formRef.current , 't_cr2hag0nIz3hFqm')
       .then((result) => {
-          console.log(result.text);
+          if(result.text.toLowerCase()==="ok"){
+            toast("Email sent! We'll be in touch with you shortly.")
+          }
       }, (error) => {
           console.log(error.text);
+          toast("Trouble sending email. Please drop us an email at XXX.")
       });
   };
   return (
       <div className="flex flex-col lg:flex-row items-center lg:items-start w-full lg:justify-around mb-10">
+        <ToastContainer/>
         <div className="flex flex-col gap-[15px] w-full lg:w-fit p-[60px] items-start text-center lg:text-start">
           <span className="text-xl font-bold text-purple w-full">
             Any Queries?
@@ -84,12 +91,13 @@ export default function Contact1() {
           <form
             className="flex flex-col gap-[20px] w-full"
             onSubmit={handleSubmit(submitHandler)}
+            ref={formRef}
           >
             <div className="relative flex">
               <input
                 placeholder="Your Name *"
                 className="w-full h-[50px] border-[1px] border-slate-200 px-[20px]"
-                {...register("name", {
+                {...register("from_name", {
                   ...genRHFRegisterOptionsRequired(),
                   ...genRHFRegisterOptionsLength(3, 50),
                 })}
@@ -104,7 +112,7 @@ export default function Contact1() {
               <input
                 placeholder="Your Email *"
                 className="w-full h-[50px] border-[1px] border-slate-200 px-[20px]"
-                {...register("email", {
+                {...register("from_email", {
                   ...genRHFRegisterOptionsRequired(),
                   ...genRHFRegisterOptionsLength(3, 50),
                   pattern: {
@@ -123,7 +131,7 @@ export default function Contact1() {
               <input
                 placeholder="Your Phone *"
                 className="w-full h-[50px] border-[1px] border-slate-200 px-[20px]"
-                {...register("phone", {
+                {...register("from_phone", {
                   ...genRHFRegisterOptionsRequired(),
                   ...genRHFRegisterOptionsLength(3, 12),
                   pattern: {
@@ -143,7 +151,7 @@ export default function Contact1() {
                 rows={4}
                 placeholder="Your Query *"
                 className="w-full border-[1px] border-slate-200 p-[20px]"
-                {...register("query", {
+                {...register("from_query", {
                   ...genRHFRegisterOptionsLength(1, 200),
                 })}
               ></textarea>
