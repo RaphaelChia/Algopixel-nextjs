@@ -49,7 +49,7 @@ export default function Contact1() {
           </span>
           <div className="w-full flex flex-col md:flex-row lg:flex-col gap-[15px] justify-between lg:justify-normal">
             <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full">
-              <div className="w-[50px] flex items-start h-[50px]">
+              <div className="w-[50px] flex items-center justify-center h-[50px]">
                 <MapIcon className="w-10 h-10 stroke-purple animate-wiggle" />
               </div>
               <div className="flex flex-col grow text-start md:text-center lg:text-start mx-4 leading-relaxed">
@@ -62,7 +62,7 @@ export default function Contact1() {
               </div>
             </div>
             <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full ">
-              <div className="w-[50px] flex items-start h-[40px]">
+              <div className="w-[50px] flex items-center justify-center h-[40px]">
                 <EnvelopeIcon className="w-10 h-10 stroke-purple animate-wiggle" />
               </div>
               <div className="flex flex-col grow text-start md:text-center lg:text-start mx-4 leading-relaxed">
@@ -73,7 +73,7 @@ export default function Contact1() {
               </div>
             </div>
             <div className="flex flex-row md:flex-col lg:flex-row justify-center items-center w-full md:w-1/3 lg:w-full">
-              <div className="w-[50px] flex items-start h-[40px]">
+              <div className="w-[50px] flex items-center justify-center h-[40px]">
                 <PhoneIcon className="w-10 h-10 stroke-purple animate-wiggle" />
               </div>
               <div className="flex flex-col grow text-start md:text-center lg:text-start mx-4 leading-relaxed">

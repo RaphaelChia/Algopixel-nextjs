@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from 'next/link';
+import CourseCard from "./Components/CourseCard";
 
-interface datatype {
+export interface datatype {
     imgSrc: string;
     heading: string;
     suitable: string;
@@ -71,33 +72,19 @@ const Aboutdata: datatype[] = [
         paragraph: "This program equips participants with a deep understanding of web development, with a central focus on the dynamic and interactive aspects of web design. By learning JavaScript, students become adept at adding interactivity and functionality to websites, empowering them to create engaging, user-friendly web projects.",
 
     }
-    
+
 ]
 
-export default function Courses () {
+export default function Courses() {
     return (
         <div className="bg-gradient-to-b from-[#F0F6FB] to-white-300 mb-10 pb-10">
-            <div className="mx-auto max-w-2xl py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="mx-auto py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h3 className="text-3xl sm:text-4xl font-bold text-darkblue text-center my-6">All Our Courses</h3>
                 <h5 className="text-darkblue opacity-75 text-xl font-normal text-center">From crafting websites to dreaming up interactive games, we have the perfect course to develop a passion for coding.</h5>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-12'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-[40px] mt-12 items-stretch'>
                     {Aboutdata.map((item, i) => (
-                        <div key={i}>
-                            <Image src={item.imgSrc} alt={item.imgSrc} width={800} height={400}  className="mb-1 rounded-t-2xl" />
-                            <div className='bg-white rounded-2xl p-10 mb-4 mt-0 featureShadow'>
-
-                            <h3 className="text-2xl font-bold text-darkblue mt-5">{item.heading}</h3>
-
-                            <h5 className="text-xs font-normal text-darkblue opacity-70 mt-2">{item.suitable}</h5>
-
-                            <h4 className='text-sm font-normal leading-loose text-darkblue opacity-75 my-4'>{item.paragraph}</h4>
-                            {/* <Link href={'/'} className="text-electricblue text-xl font-medium flex gap-2 pt-10 pb-2">
-                                Learn more <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
-                            </Link> */}
-
-                        </div>
-                        </div>
+                        <CourseCard key={i} item={item}/>
                     ))}
                 </div>
             </div>
