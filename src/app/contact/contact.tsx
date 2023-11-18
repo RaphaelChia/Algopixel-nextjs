@@ -87,7 +87,7 @@ export default function Contact1() {
         </div>
         <div className="flex flex-col grow w-full lg:w-auto lg:max-w-[800px] p-[60px] gap-[15px] items-center lg:items-start">
           <span className="text-4xl font-bold ">Drop us a line</span>
-          <span>We're here to answer your questions</span>
+          <span>We&apos;re here to answer your questions</span>
           <form
             className="flex flex-col gap-[20px] w-full"
             onSubmit={handleSubmit(submitHandler)}

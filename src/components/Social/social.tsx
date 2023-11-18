@@ -5,7 +5,7 @@ interface socialLinks {
     imgSrc: string;
     link: string;
     width: number;
-    height:mumber;
+    height:number;
 }
 
 const socialLinks: socialLinks[] = [

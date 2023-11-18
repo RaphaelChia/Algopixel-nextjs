@@ -50,7 +50,7 @@ const Provide = () => {
                 How Coding Education Shapes Young Futures
               </p>
               <h4 className="text-lg pt-4 font-normal lh-33 text-center lg:text-start text-bluegray leading-loose">
-                Coding for kids is more than programming; it's about building
+                Coding for kids is more than programming; it&apos;s about building
                 skills and unleashing creativity while navigating the digital
                 landscape with ease.
               </h4>

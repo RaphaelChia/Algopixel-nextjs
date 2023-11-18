@@ -19,72 +19,86 @@ import {
   Input,
 } from "@material-tailwind/react";
  
-const TABLE_HEAD = ["Course", "Amount", "Date", "Status", "Account", ""];
+const TABLE_HEAD = ["Course", "Date", "Time", "Mode",  "Price", "Details"];
  
 const TABLE_ROWS = [
   {
-    img: "https://docs.material-tailwind.com/img/logos/logo-spotify.svg",
-    name: "Spotify",
-    amount: "$2,500",
-    date: "Wed 3:00pm",
-    status: "paid",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
+    img: "/courses/thunkable.png",
+    name: "Thunkable",
+    date: "Sunday, 3 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "In-person",
+    price: "$220",
+    details: "App Development | Suitable for 10-12 years old",
   },
   {
-    img: "https://docs.material-tailwind.com/img/logos/logo-amazon.svg",
-    name: "Amazon",
-    amount: "$5,000",
-    date: "Wed 1:00pm",
-    status: "paid",
-    account: "master-card",
-    accountNumber: "1234",
-    expiry: "06/2026",
+    img: "/courses/python.png",
+    name: "Python",
+    date: "Friday, 8 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "Online",
+    price: "$180",
+    details: "Computer Science | 10-18 years old",
   },
   {
-    img: "https://docs.material-tailwind.com/img/logos/logo-pinterest.svg",
-    name: "Pinterest",
-    amount: "$3,400",
-    date: "Mon 7:40pm",
-    status: "pending",
-    account: "master-card",
-    accountNumber: "1234",
-    expiry: "06/2026",
+    img: "/courses/scratch.png",
+    name: "Scratch",
+    date: "Sunday, 10 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "In-person",
+    price: "$220",
+    details: "Game Development | 7-9 years old",
   },
   {
-    img: "https://docs.material-tailwind.com/img/logos/logo-google.svg",
-    name: "Google",
-    amount: "$1,000",
-    date: "Wed 5:00pm",
-    status: "paid",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
+    img: "/courses/webdev.png",
+    name: "HTML/CSS",
+    date: "Tuesday, 12 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "Online",
+    price: "$180",
+    details: "Web Development | 10-18 years old",
   },
   {
-    img: "https://docs.material-tailwind.com/img/logos/logo-netflix.svg",
-    name: "netflix",
-    amount: "$14,000",
-    date: "Wed 3:30am",
-    status: "cancelled",
-    account: "visa",
-    accountNumber: "1234",
-    expiry: "06/2026",
+    img: "/courses/scratch.png",
+    name: "Scratch",
+    date: "Thursday, 14 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "Online",
+    price: "$180",
+    details: "Game Development | 7-9 years old",
+  },
+  {
+    img: "/courses/python.png",
+    name: "Python",
+    date: "Saturday, 16 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "Online",
+    price: "$180",
+    details: "Computer Science | 10-18 years old",
+  },
+  {
+    img: "/courses/webdev.png",
+    name: "HTML/CSS",
+    date: "Sunday, 17 Dec 2023",
+    time: "9:00am-2.00pm",
+    mode: "In-person",
+    price: "$220",
+    details: "Web Development | 10-18 years old",
   },
 ];
  
 export function HolidayClasses() {
   return (
-    <Card className="h-full w-full">
+    <div className="bg-gradient-to-b from-[#F0F6FB] to-white-300 p-5">
+    <Card className="m-12 ">
       <CardHeader floated={false} shadow={false} className="rounded-none">
-        <div className="mb-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
+        <div className="m-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Recent Transactions
+              December 2023 Class Schedule
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-              These are details about the last transactions
+              These are details about our upcoming classes
             </Typography>
           </div>
           {/* <div className="flex w-full shrink-0 gap-2 md:w-max">
@@ -100,7 +114,7 @@ export function HolidayClasses() {
           </div> */}
         </div>
       </CardHeader>
-      <CardBody className="overflow-scroll px-0">
+      <CardBody className="overflow-none px-0">
         <table className="w-full min-w-max table-auto text-left">
           <thead>
             <tr>
@@ -120,18 +134,17 @@ export function HolidayClasses() {
               ))}
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {TABLE_ROWS.map(
               (
                 {
                   img,
                   name,
-                  amount,
                   date,
-                  status,
-                  account,
-                  accountNumber,
-                  expiry,
+                  time,
+                  mode,
+                  price,
+                  details,
                 },
                 index,
               ) => {
@@ -141,7 +154,7 @@ export function HolidayClasses() {
                   : "p-4 border-b border-blue-gray-50";
  
                 return (
-                  <tr key={name}>
+                  <tr key={name} className="hover:bg-purple hover:bg-opacity-20">
                     <td className={classes}>
                       <div className="flex items-center gap-3">
                         <Avatar
@@ -165,7 +178,7 @@ export function HolidayClasses() {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {amount}
+                        {date}
                       </Typography>
                     </td>
                     <td className={classes}>
@@ -174,10 +187,37 @@ export function HolidayClasses() {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {date}
+                        {time}
                       </Typography>
                     </td>
                     <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {mode}
+                      </Typography>
+                    </td>
+                    <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {price}
+                      </Typography>
+                    </td>
+                    <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {details}
+                      </Typography>
+                    </td>
+                    {/* <td className={classes}>
                       <div className="w-max">
                         <Chip
                           size="sm"
@@ -227,12 +267,12 @@ export function HolidayClasses() {
                       </div>
                     </td>
                     <td className={classes}>
-                      {/* <Tooltip content="Edit User">
+                      <Tooltip content="Edit User">
                         <IconButton variant="text">
                           <PencilIcon className="h-4 w-4" />
                         </IconButton>
-                      </Tooltip> */}
-                    </td>
+                      </Tooltip>
+                    </td> */}
                   </tr>
                 );
               },
@@ -240,7 +280,7 @@ export function HolidayClasses() {
           </tbody>
         </table>
       </CardBody>
-      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
+      {/* <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
         <Button variant="outlined" size="sm">
           Previous
         </Button>
@@ -252,7 +292,8 @@ export function HolidayClasses() {
         <Button variant="outlined" size="sm">
           Next
         </Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
+    </div>
   );
 }
