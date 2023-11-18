@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function IndexBanner() {
   return (
@@ -29,10 +30,10 @@ export default function IndexBanner() {
               Our tailored programs empower young minds to innovate by combining
               the precision of coding with the creativity of pixels.
             </h3>
-            <div className="pt-8 mx-auto md:mx-0">
-              <button className="text-white text-xl font-semibold py-4 px-12 rounded-full transition duration-150 ease-in-out bg-purple hover:text-purple hover:bg-white border-purple border-[2px]">
-                Our Story
-              </button>
+            <div className="pt-8 mx-auto md:mx-0 mt-4">
+              <Link href="/about" className="text-white text-xl font-semibold py-4 px-12 rounded-full transition duration-150 ease-in-out bg-purple hover:text-purple hover:bg-white border-purple border-[2px]">
+              Our Story
+              </Link>
             </div>
           </div>
 

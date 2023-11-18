@@ -1,5 +1,6 @@
 'use client'
 import PagesBanner from "@/components/Banners/pagesbanner";
+import Contact from "@/components/Contact/contact";
 import { genRHFRegisterOptionsLength, genRHFRegisterOptionsRequired } from "@/utils/rhf";
 import { FieldValues, useForm } from "react-hook-form";
 
@@ -123,6 +124,8 @@ export default function Page() {
           </form>
         </div>
       </div>
+      <Contact/>
     </div>
+
   );
 }

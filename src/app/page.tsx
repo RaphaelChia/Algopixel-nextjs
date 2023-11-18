@@ -1,5 +1,4 @@
 import IndexBanner from '@/components/Banners/indexbanner'
-import CallToAction from '@/components/CallToAction'
 import Provide from '@/components/Provide'
 import Tracks from '@/components/Tracks'
 import ScrollToTopButton from '@/components/scrollup'
@@ -11,7 +10,6 @@ export default function Home() {
       <IndexBanner/>
       <Tracks/>
       <Provide/>
-      <CallToAction/>
     </main>
   )
 }
