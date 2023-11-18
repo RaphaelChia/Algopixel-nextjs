@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className={`text-white p-4 w-full sticky top-0 transition-all bg-lightblue z-50 h-[80px] lg:h-[112px] ${isScrolled ? "shadow-md" : "h-[112px] shadow-none"
+      className={`text-white p-4 w-full sticky top-0 transition-all bg-lightblue z-50  ${isScrolled ? "shadow-md h-[80px]" : "lg:h-[100px] h-[80px] shadow-none"
         }`}
     >
       <>

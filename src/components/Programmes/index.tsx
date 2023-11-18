@@ -48,16 +48,16 @@ export default function Programmes() {
           Range of Programs
         </h5>
 
-        <div className="gap-x-16 gap-y-4 lg:gap-x-8 mt-10 flex flex-col md:flex-row justify-around items-center">
+        <div className="h-fit mt-10 flex flex-col md:flex-row justify-around gap-[30px] items-center md:items-stretch">
           {Aboutdata.map((item, i) => (
+            <div
+                key={i}
+                className=" text-xl font-medium flex text-darkblue flex-col items-center justify-center bg-white rounded-2xl p-10 featureShadow w-full max-w-[500px] border-[2px] border-black hover:scale-105"
+              >
             <Link
               href={item.reflink}
-              className=" text-xl font-medium flex gap-2 pt-5 pb-2 text-darkblue "
+              className=""
             >
-              <div
-                key={i}
-                className="bg-white rounded-2xl p-10 m-3 featureShadow grow max-w-[500px] outline outline-offset-1 outline-darkblue hover:scale-105"
-              >
                 <Image
                   src={item.imgSrc}
                   alt={item.imgSrc}
@@ -102,9 +102,10 @@ export default function Programmes() {
                     className="ml-2"
                   />
                 </div>
-              </div>
             </Link>
+              </div>
           ))}
+         
         </div>
       </div>
     </div>
